@@ -1,0 +1,420 @@
+{
+  "version": 8,
+  "name": "hillshade - blue",
+  "metadata": {
+    "mapbox:autocomposite": true,
+    "mapbox:type": "template",
+    "mapbox:sdk-support": {
+      "android": "10.0.0",
+      "ios": "10.0.0",
+      "js": "2.6.0"
+    },
+    "mapbox:groups": {
+      "6a0ce18251ac0f3d232a3714863f7bec": {
+        "name": "Hillshade Layers",
+        "collapsed": true
+      }
+    },
+    "mapbox:uiParadigm": "global"
+  },
+  "center": [-109.63845440401367, 39.42805530995929],
+  "zoom": 8.468779132562796,
+  "bearing": 0,
+  "pitch": 0,
+  "light": { "color": "hsl(31, 81%, 47%)", "intensity": 0.98 },
+  "sources": {
+    "mapbox://mapbox.satellite": {
+      "url": "mapbox://mapbox.satellite",
+      "type": "raster",
+      "tileSize": 256
+    },
+    "mapbox://mapbox.mapbox-terrain-dem-v1": {
+      "url": "mapbox://mapbox.mapbox-terrain-dem-v1",
+      "type": "raster-dem",
+      "tileSize": 256
+    },
+    "composite": {
+      "url": "mapbox://jpegmountainman.8zsqnz36,jpegmountainman.8jwytcl8,mapbox.mapbox-streets-v8,mapbox.mapbox-terrain-v2",
+      "type": "vector"
+    }
+  },
+  "sprite": "mapbox://sprites/jpegmountainman/cl1pg6kxc001i14s6yhiq6i9l/ck2u8j60r58fu0sgyxrigm3cu",
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "ne-10m-ocean-chfty6",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "ne_10m_ocean-chfty6",
+      "layout": { "visibility": "none" },
+      "paint": { "fill-color": "hsl(0, 0%, 100%)" }
+    },
+    {
+      "id": "background",
+      "type": "background",
+      "layout": { "visibility": "none" },
+      "paint": { "background-color": "hsl(236, 0%, 100%)" }
+    },
+    {
+      "id": "mapbox-satellite",
+      "type": "raster",
+      "source": "mapbox://mapbox.satellite",
+      "layout": { "visibility": "none" },
+      "paint": {}
+    },
+    {
+      "id": "ne-10m-admin-0-countries-9vwfkb copy",
+      "type": "line",
+      "source": "composite",
+      "source-layer": "ne_10m_admin_0_countries-9vwfkb",
+      "layout": { "visibility": "none" },
+      "paint": { "line-width": 0.1 }
+    },
+    {
+      "id": "landcover",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "landcover",
+      "layout": {},
+      "paint": { "fill-color": "hsla(0, 1%, 83%, 0.56)" }
+    },
+    {
+      "id": "mapbox-mapbox-terrain-dem-v1",
+      "type": "hillshade",
+      "source": "mapbox://mapbox.mapbox-terrain-dem-v1",
+      "layout": {},
+      "paint": {
+        "hillshade-exaggeration": 1,
+        "hillshade-illumination-direction": 359,
+        "hillshade-illumination-anchor": "map",
+        "hillshade-shadow-color": "#218bed",
+        "hillshade-accent-color": "hsla(209, 15%, 52%, 0.67)",
+        "hillshade-highlight-color": "hsla(209, 93%, 48%, 0.32)"
+      }
+    },
+    {
+      "id": "mapbox-mapbox-terrain-dem-v1 copy",
+      "type": "hillshade",
+      "source": "mapbox://mapbox.mapbox-terrain-dem-v1",
+      "layout": {},
+      "paint": {
+        "hillshade-exaggeration": 1,
+        "hillshade-illumination-direction": 359,
+        "hillshade-illumination-anchor": "map",
+        "hillshade-shadow-color": "hsla(209, 85%, 53%, 0.57)",
+        "hillshade-accent-color": "hsla(209, 10%, 38%, 0.67)",
+        "hillshade-highlight-color": "hsla(209, 93%, 48%, 0.19)"
+      }
+    },
+    {
+      "id": "water copy 3",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "hsla(190, 90%, 74%, 0.21)",
+        "fill-opacity": 0.76,
+        "fill-translate": [4, 4]
+      }
+    },
+    {
+      "id": "water copy 2",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "hsla(190, 90%, 74%, 0.21)",
+        "fill-opacity": 0.76,
+        "fill-translate": [3, 3]
+      }
+    },
+    {
+      "id": "water copy 1",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "hsla(190, 90%, 74%, 0.21)",
+        "fill-opacity": 0.76,
+        "fill-translate": [2, 2]
+      }
+    },
+    {
+      "id": "water copy",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "hsla(190, 90%, 74%, 0.21)",
+        "fill-opacity": 0.64,
+        "fill-translate": [1, 1]
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "water",
+      "paint": {
+        "fill-color": "hsla(190, 90%, 60%, 0.46)",
+        "fill-opacity": 0.64
+      }
+    },
+    {
+      "id": "hillshade",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.08,
+        "fill-translate": [0, 0],
+        "fill-color": "hsla(0, 0%, 0%, 0.02)"
+      }
+    },
+    {
+      "id": "hillshade copy",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.08,
+        "fill-translate": [1, 1],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 1",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.08,
+        "fill-translate": [2, 2],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 2",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.08,
+        "fill-translate": [3, 3],
+        "fill-color": "hsla(187, 93%, 42%, 0.22)"
+      }
+    },
+    {
+      "id": "hillshade copy 3",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.08,
+        "fill-translate": [4, 4],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 4",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.08,
+        "fill-translate": [5, 5],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 5",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.39,
+        "fill-translate": [6, 6],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 6",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.33,
+        "fill-translate": [7, 7],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 7",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.44,
+        "fill-translate": [8, 8],
+        "fill-color": "hsla(187, 93%, 42%, 0.2)"
+      }
+    },
+    {
+      "id": "hillshade copy 8",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.47,
+        "fill-translate": [9, 9],
+        "fill-color": "hsla(187, 93%, 42%, 0.15)"
+      }
+    },
+    {
+      "id": "hillshade copy 9",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.53,
+        "fill-translate": [10, 10],
+        "fill-color": "hsla(187, 93%, 42%, 0.14)"
+      }
+    },
+    {
+      "id": "hillshade copy 10",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.58,
+        "fill-translate": [11, 11],
+        "fill-color": "hsla(187, 93%, 42%, 0.16)"
+      }
+    },
+    {
+      "id": "hillshade copy 11",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.64,
+        "fill-translate": [12, 12],
+        "fill-color": "hsla(0, 0%, 0%, 0.02)"
+      }
+    },
+    {
+      "id": "hillshade copy 12",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.69,
+        "fill-translate": [13, 13],
+        "fill-color": "hsla(0, 0%, 0%, 0.02)"
+      }
+    },
+    {
+      "id": "hillshade copy 13",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.75,
+        "fill-translate": [14, 14],
+        "fill-color": "hsla(0, 0%, 0%, 0.02)"
+      }
+    },
+    {
+      "id": "hillshade copy 14",
+      "type": "fill",
+      "metadata": { "mapbox:group": "6a0ce18251ac0f3d232a3714863f7bec" },
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-opacity": 0.78,
+        "fill-translate": [15, 15],
+        "fill-color": "hsla(0, 0%, 0%, 0.02)"
+      }
+    },
+    {
+      "id": "hillshade (1)",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-color": [
+          "match",
+          ["get", "class"],
+          ["highlight"],
+          "hsla(16, 83%, 30%, 0.05)",
+          "hsla(0, 0%, 0%, 0)"
+        ]
+      }
+    },
+    {
+      "id": "hillshade (2)",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "filter": ["match", ["get", "level"], [94, 90], true, false],
+      "layout": { "visibility": "none" },
+      "paint": { "fill-color": "hsla(46, 84%, 43%, 0.08)" }
+    },
+    {
+      "id": "ne-10m-admin-0-countries-9vwfkb",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "ne_10m_admin_0_countries-9vwfkb",
+      "layout": { "visibility": "none" },
+      "paint": {
+        "fill-color": [
+          "match",
+          ["get", "ADMIN"],
+          ["South Africa"],
+          "hsla(0, 0%, 0%, 0)",
+          "hsla(0, 0%, 100%, 0.4)"
+        ]
+      }
+    }
+  ],
+  "created": "2022-04-07T20:24:23.687Z",
+  "modified": "2022-04-07T20:58:16.280Z",
+  "id": "cl1pg6kxc001i14s6yhiq6i9l",
+  "owner": "jpegmountainman",
+  "visibility": "private",
+  "protected": false,
+  "draft": false
+}
